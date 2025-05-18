@@ -19,10 +19,21 @@ namespace FootballStatsLive.Server.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetFootballStats")]
-        public IEnumerable<TblFootballStat> Get()
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            // used to check if server is up
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("/[controller]/Index")]
+        public IEnumerable<TblFootballStat> GetAllStats()
         {
             return objFootballStat.GetAllStats();
         }
+
+
     }
 }
