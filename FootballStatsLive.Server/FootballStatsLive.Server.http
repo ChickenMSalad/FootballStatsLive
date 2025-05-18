@@ -1,0 +1,6 @@
+@FootballStatsLive.Server_HostAddress = http://localhost:5234
+
+GET {{FootballStatsLive.Server_HostAddress}}/GetAllStats/
+Accept: application/json
+
+###
