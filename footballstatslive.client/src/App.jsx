@@ -163,10 +163,7 @@ function App() {
     }
 
     function onSearch(searchObj) {
-        console.log('searchTerm was ' + searchObj.searchTerm);
-        console.log('columnTerm was ' + searchObj.columnTerm);
         populateFootballStatsSearch(searchObj.searchTerm, searchObj.columnTerm) 
-
     }
 }
 
