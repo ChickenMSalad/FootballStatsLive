@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import './App.css';
+import SearchBar from "./components/SearchBar";
 
 function App() {
     const [stats, setStats] = useState();
@@ -68,6 +71,17 @@ function App() {
             ]
         },
         {
+            name: 'Winning Percentage',
+            selector: row => row.winningPercentage,
+            sortable: true,
+            conditionalCellStyles: [
+                {
+                    when: row => row.winningPercentage == null,
+                    classNames: ['missingdata'],
+                },
+            ]
+        },
+        {
             name: 'Wins',
             selector: row => row.wins,
             sortable: true,
@@ -114,17 +128,20 @@ function App() {
     ];
 
     const contents = stats === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <DataTable
-            columns={columns}
-            data={stats}
-            pagination
-        />;
+        ? <div><p><em>Loading Football Stats...</em></p><Skeleton count={10} /></div>
+        : <div>
+            <SearchBar onSearch={onSearch} cols={columns} />
+            <DataTable
+             columns={columns}
+             data={stats}
+             pagination
+             dense
+            />
+          </div>
 
     return (
         <div>
-            <h1 id="tableLabel">Football Stats</h1>
-            <p>This component demonstrates fetching data from the server.</p>
+            <h1 id="tableLabel">Football Stats Live</h1>
             {contents}
         </div>
     );
@@ -135,6 +152,21 @@ function App() {
             const data = await response.json();
             setStats(data);
         }
+    }
+
+    async function populateFootballStatsSearch(searchTerm, columnTerm) {
+        const response = await fetch(`/footballstats/search?searchTerm=${searchTerm}&columnTerm=${columnTerm}`);
+        if (response.ok) {
+            const data = await response.json();
+            setStats(data);
+        }
+    }
+
+    function onSearch(searchObj) {
+        console.log('searchTerm was ' + searchObj.searchTerm);
+        console.log('columnTerm was ' + searchObj.columnTerm);
+        populateFootballStatsSearch(searchObj.searchTerm, searchObj.columnTerm) 
+
     }
 }
 

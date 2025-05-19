@@ -34,6 +34,12 @@ namespace FootballStatsLive.Server.Controllers
             return objFootballStat.GetAllStats();
         }
 
+        [HttpGet]
+        [Route("/[controller]/Search")]
+        public IEnumerable<TblFootballStat> GetStatsBySearch(string? searchTerm, string? columnTerm)
+        {
+            return objFootballStat.GetStatsBySearch(searchTerm, columnTerm);
+        }
 
     }
 }
