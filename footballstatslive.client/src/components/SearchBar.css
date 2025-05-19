@@ -54,7 +54,7 @@
     background: #ccc;
 }
 
-.search-icon {
+.search-icon, .reset-icon {
     display: inline-block;
     font: normal normal normal 14px/1;
     font-size: inherit;
@@ -66,6 +66,11 @@
 /* this is the unicode for the left pointing magnifying glass */
 .search-icon::before {
     content: "\01F50D"
+}
+
+/* this is the unicode for the anticlockwise circle arrows */
+.reset-icon::before {
+    content: "\01F504"
 }
 
 /* TODO: make searchbar breakpoint for small screen responsive behavior */

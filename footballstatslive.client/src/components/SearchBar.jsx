@@ -20,6 +20,14 @@ function SearchBar(props) {
         props.onSearch(searchObj);
     };
 
+    // handler for resetting the search filters
+    // used on button click of the reset button
+    const resetSearch = () => {
+        setColumnTerm('All');
+        setSearchTerm('');
+        props.onReset();
+    };
+
     // keyboard handler for when enter is pressed instead of button click
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -57,7 +65,8 @@ function SearchBar(props) {
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
             />
-            <button onClick={handleSearch}><i className="search-icon"></i></button>
+            <button onClick={handleSearch} aria-label="Search"><i className="search-icon" aria-hidden="true"></i></button>
+            <button onClick={resetSearch} aria-label="Reset Data"><i className="reset-icon" aria-hidden="true"></i></button>
             <div className="column-search">
                 <span>Search By Column:</span>
                 <Dropdown options={options} onChange={handleSelectChange} value={options[0].label} placeholder="Select a column" />

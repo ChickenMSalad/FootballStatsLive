@@ -130,13 +130,14 @@ function App() {
     const contents = stats === undefined
         ? <div><p><em>Loading Football Stats...</em></p><Skeleton count={10} /></div>
         : <div>
-            <SearchBar onSearch={onSearch} cols={columns} />
+            <SearchBar onSearch={onSearch} onReset={onReset} cols={columns} />
             <DataTable
              columns={columns}
              data={stats}
              pagination
              dense
             />
+            <p className="error">An asterisk * denotes missing, bad or unsearchable data.</p>
           </div>
 
     return (
@@ -163,7 +164,10 @@ function App() {
     }
 
     function onSearch(searchObj) {
-        populateFootballStatsSearch(searchObj.searchTerm, searchObj.columnTerm) 
+        populateFootballStatsSearch(searchObj.searchTerm, searchObj.columnTerm); 
+    }
+    function onReset() {
+        populateFootballStatsData();
     }
 }
 

@@ -11,3 +11,8 @@
     font-weight: bold;
     content: "*";
 }
+
+.error {
+    color: red;
+    font-size: small;
+}
