@@ -37,4 +37,30 @@
     </None>
   </ItemGroup>
 
+  <!--Please add below settings, it can build the react project and save it under wwwroot folder-->
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build">
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build this project." />
+  </Target>
+
+  <Target Name="PublishReact" AfterTargets="ComputeFilesToPublish">
+
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build " />
+
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)\dist\**" />
+      <ResolvedFileToPublish Include="$(SpaRoot)public\**" Exclude="@(ResolvedFileToPublish)">
+          <RelativePath>wwwroot\%(RecursiveDir)%(FileName)%(Extension)</RelativePath>
+          <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+          <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+
 </Project>
