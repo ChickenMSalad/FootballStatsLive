@@ -10,22 +10,19 @@ const StatsContextProvider = (props) => {
         try {
             const response = await fetch('/footballstats');
             if (response.ok) {
-                console.log('Response OK!!!');
                 return true;
             }
         } catch (error) {
             console.error('Error checking server status:', error);
         }
-        console.log('Response NOT OK');
         return false;
     };
 
     const waitForServer = async () => {
-        console.log('Calling waitForServer');
         while (!(await checkServerStatus())) {
             await new Promise(resolve => setTimeout(resolve, 1000)); // Check every 1 second
         }
-        console.log('Server is ready!');
+        // server is ready
         populateFootballStatsData();
 
     };
@@ -61,7 +58,7 @@ const StatsContextProvider = (props) => {
             selector: row => row.team,
             sortable: true,
             width: '200px',
-            cell: row => <div className={'team ' + row.team.replace(/[^0-9a-zA-Z]/g, '')}>{row.team}</div>
+            cell: row => <div data-tag="allowRowEvents" className={'team ' + row.team.replace(/[^0-9a-zA-Z]/g, '')}>{row.team}</div>
         },
         {
             name: 'Mascot',

@@ -17,10 +17,10 @@
         transform: rotate(360deg);
     }
 }
-.coin{
+.teamdata {
     padding: 0 20px;
 }
-.coin-name{
+.teamdata-name{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,31 +28,465 @@
     margin: 100px auto;
     margin-bottom: 50px;
 }
-.coin-name img{
-    max-width: 100px;
-}
-.coin-name p b{
+.teamdata-name p b{
     font-size: 44px;
     font-weight: 500;
 }
-.coin-chart{
-    max-width: 600px;
-    height: 250px;
-    margin: auto;
-}
-.coin-info{
+.teamdata-info{
     max-width: 600px;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
 }
-.coin-info ul{
+.teamdata-info ul{
     display: flex;
     justify-content: space-between;
     padding: 10px 0px;
     border-bottom: 1px solid #5f5d5f;
     list-style: none;
 }
-.coin-info ul li:last-child{
+.teamdata-info ul li:last-child{
     font-weight: 300;
+}
+.teamlg {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    display: inline-block;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.AirForceLG {
+    background-image: url(/src/assets/AirForceFalcons.png);
+}
+
+.AkronLG {
+    background-image: url(/src/assets/AkronZips.png);
+}
+
+.AlabamaLG {
+    background-image: url(/src/assets/AlabamaCrimsonTide.png);
+}
+
+.ArizonaLG {
+    background-image: url(/src/assets/ArizonaStateSunDevils.png);
+}
+
+.ArizonaStateLG {
+    background-image: url(/src/assets/ArizonaWildcats.png);
+}
+
+.ArkansasLG {
+    background-image: url(/src/assets/ArkansasRazorbacks.png);
+}
+
+.ArkansasStateLG {
+    background-image: url(/src/assets/ArkansasStateRedWolves.png);
+}
+
+.ArmyLG {
+    background-image: url(/src/assets/ArmyBlackKnights.png);
+}
+
+.AuburnLG {
+    background-image: url(/src/assets/AuburnTigers.png);
+}
+
+.BallStateLG {
+    background-image: url(/src/assets/BallStateCardinals.png);
+}
+
+.BaylorLG {
+    background-image: url(/src/assets/BaylorBears.png);
+}
+
+.BostonCollegeLG {
+    background-image: url(/src/assets/BostonCollegeEagles.png);
+}
+
+.BowlingGreenLG {
+    background-image: url(/src/assets/BowlingGreenFalcons.png);
+}
+
+.BrighamYoungLG {
+    background-image: url(/src/assets/BYUCougars.png);
+}
+
+.CaliforniaLG {
+    background-image: url(/src/assets/CaliforniaGoldenBears.png);
+}
+
+.CentralMichiganLG {
+    background-image: url(/src/assets/CentralMichiganChippewas.png);
+}
+
+.CincinnatiLG {
+    background-image: url(/src/assets/CincinnatiBearcats.png);
+}
+
+.ClemsonLG {
+    background-image: url(/src/assets/ClemsonTigers.png);
+}
+
+.ColoradoLG {
+    background-image: url(/src/assets/ColoradoBuffaloes.png);
+}
+
+.ColoradoStateLG {
+    background-image: url(/src/assets/ColoradoStateRams.png);
+}
+
+.DukeLG {
+    background-image: url(/src/assets/DukeBlueDevils.png);
+}
+
+.EastCarolinaLG {
+    background-image: url(/src/assets/EastCarolinaPirates.png);
+}
+
+.EasternMichiganLG {
+    background-image: url(/src/assets/EasternMichiganEagles.png);
+}
+
+.FloridaLG {
+    background-image: url(/src/assets/FloridaGators.png);
+}
+
+.FloridaStateLG {
+    background-image: url(/src/assets/FloridaStateSeminoles.png);
+}
+
+.FresnoStateLG {
+    background-image: url(/src/assets/FresnoStateBulldogs.png);
+}
+
+.GeorgiaLG {
+    background-image: url(/src/assets/GeorgiaBulldogs.png);
+}
+
+.GeorgiaTechLG {
+    background-image: url(/src/assets/GeorgiaTechYellowJackets.png);
+}
+
+.HawaiiLG {
+    background-image: url(/src/assets/HawaiiRainbowWarriors.png);
+}
+
+.HoustonLG {
+    background-image: url(/src/assets/HoustonCougars.png);
+}
+
+.IdahoLG {
+    background-image: url(/src/assets/vandals.png);
+}
+
+.IllinoisLG {
+    background-image: url(/src/assets/IllinoisFightingIllini.png);
+}
+
+.IndianaLG {
+    background-image: url(/src/assets/IndianaHoosiers.png);
+}
+
+.IowaLG {
+    background-image: url(/src/assets/IowaHawkeyes.png);
+}
+
+.IowaStateLG {
+    background-image: url(/src/assets/IowaStateCyclones.png);
+}
+
+.KansasLG {
+    background-image: url(/src/assets/KansasJayhawks.png);
+}
+
+.KansasStateLG {
+    background-image: url(/src/assets/KansasStateWildcats.png);
+}
+
+.KentLG {
+    background-image: url(/src/assets/KentStateGoldenFlashes.png);
+}
+
+.KentuckyLG {
+    background-image: url(/src/assets/KentuckyWildcats.png);
+}
+
+.LouisianaStateLG {
+    background-image: url(/src/assets/LSUTigers.png);
+}
+
+.LouisianaTechLG {
+    background-image: url(/src/assets/LouisianaTechBulldogs.png);
+}
+
+.LouisianaLafayetteLG {
+    background-image: url(/src/assets/LouisianaRaginCajuns.png);
+}
+
+.LouisianaMonroeLG {
+    background-image: url(/src/assets/ULMonroeWarhawks.png);
+}
+
+.LouisvilleLG {
+    background-image: url(/src/assets/LouisvilleCardinals.png);
+}
+
+.MarshallLG {
+    background-image: url(/src/assets/MarshallThunderingHerd.png);
+}
+
+.MarylandLG {
+    background-image: url(/src/assets/MarylandTerrapins.png);
+}
+
+.MemphisLG {
+    background-image: url(/src/assets/MemphisTigers.png);
+}
+
+.MiamiFloridaLG {
+    background-image: url(/src/assets/MiamiHurricanes.png);
+}
+
+.MiamiOhioLG {
+    background-image: url(/src/assets/MiamiOHRedHawks.png);
+}
+
+.MichiganLG {
+    background-image: url(/src/assets/MichiganWolverines.png);
+}
+
+.MichiganStateLG {
+    background-image: url(/src/assets/MichiganStateSpartans.png);
+}
+
+.MinnesotaLG {
+    background-image: url(/src/assets/MinnesotaGoldenGophers.png);
+}
+
+.MississippiLG {
+    background-image: url(/src/assets/OleMissRebels.png);
+}
+
+.MississippiStateLG {
+    background-image: url(/src/assets/MississippiStateBulldogs.png);
+}
+
+.MissouriLG {
+    background-image: url(/src/assets/MissouriTigers.png);
+}
+
+.NavyLG {
+    background-image: url(/src/assets/NavyMidshipmen.png);
+}
+
+.NebraskaLG {
+    background-image: url(/src/assets/NebraskaCornhuskers.png);
+}
+
+.NevadaLasVegasLG {
+    background-image: url(/src/assets/UNLVRebels.png);
+}
+
+.NevadaRenoLG {
+    background-image: url(/src/assets/NevadaWolfPack.png);
+}
+
+.NewMexicoLG {
+    background-image: url(/src/assets/NewMexicoLobos.png);
+}
+
+.NewMexicoStateLG {
+    background-image: url(/src/assets/NewMexicoStateAggies.png);
+}
+
+.NorthCarolinaLG {
+    background-image: url(/src/assets/NorthCarolinaTarHeels.png);
+}
+
+.NorthCarolinaStateLG {
+    background-image: url(/src/assets/NCStateWolfpack.png);
+}
+
+.NorthTexasLG {
+    background-image: url(/src/assets/NorthTexasMeanGreen.png);
+}
+
+.NorthernIllinoisLG {
+    background-image: url(/src/assets/NorthernIllinoisHuskies.png);
+}
+
+.NorthwesternLG {
+    background-image: url(/src/assets/NorthwesternWildcats.png);
+}
+
+.NotreDameLG {
+    background-image: url(/src/assets/NotreDameFightingIrish.png);
+}
+
+.OhioStateLG {
+    background-image: url(/src/assets/OhioStateBuckeyes.png);
+}
+
+.OhioUniversityLG {
+    background-image: url(/src/assets/OhioBobcats.png);
+}
+
+.OklahomaLG {
+    background-image: url(/src/assets/OklahomaSooners.png);
+}
+
+.OklahomaStateLG {
+    background-image: url(/src/assets/OklahomaStateCowboys.png);
+}
+
+.OregonLG {
+    background-image: url(/src/assets/OregonDucks.png);
+}
+
+.OregonStateLG {
+    background-image: url(/src/assets/OregonStateBeavers.png);
+}
+
+.PennStateLG {
+    background-image: url(/src/assets/PennStateNittanyLions.png);
+}
+
+.PittsburghLG {
+    background-image: url(/src/assets/PittsburghPanthers.png);
+}
+
+.PurdueLG {
+    background-image: url(/src/assets/PurdueBoilermakers.png);
+}
+
+.RiceLG {
+    background-image: url(/src/assets/RiceOwls.png);
+}
+
+.RutgersLG {
+    background-image: url(/src/assets/RutgersScarletKnights.png);
+}
+
+.SanJoseStateLG {
+    background-image: url(/src/assets/SanJosStateSpartans.png);
+}
+
+.SouthCarolinaLG {
+    background-image: url(/src/assets/SouthCarolinaGamecocks.png);
+}
+
+.SouthernCalLG {
+    background-image: url(/src/assets/USCTrojans.png);
+}
+
+.SouthernMethodistLG {
+    background-image: url(/src/assets/SMUMustangs.png);
+}
+
+.SouthernMissLG {
+    background-image: url(/src/assets/SouthernMissGoldenEagles.png);
+}
+
+.StanfordLG {
+    background-image: url(/src/assets/StanfordCardinal.png);
+}
+
+.SyracuseLG {
+    background-image: url(/src/assets/SyracuseOrange.png);
+}
+
+.TempleLG {
+    background-image: url(/src/assets/TempleOwls.png);
+}
+
+.TennesseeLG {
+    background-image: url(/src/assets/TennesseeVolunteers.png);
+}
+
+.TexasLG {
+    background-image: url(/src/assets/TexasLonghorns.png);
+}
+
+.TexasAMLG {
+    background-image: url(/src/assets/TexasAampMAggies.png);
+}
+
+.TexasChristianLG {
+    background-image: url(/src/assets/TCUHornedFrogs.png);
+}
+
+.TexasTechLG {
+    background-image: url(/src/assets/TexasTechRedRaiders.png);
+}
+
+.TexasElPasoLG {
+    background-image: url(/src/assets/TexasStateBobcats.png);
+}
+
+.ToledoLG {
+    background-image: url(/src/assets/ToledoRockets.png);
+}
+
+.TulaneLG {
+    background-image: url(/src/assets/TulaneGreenWave.png);
+}
+
+.TulsaLG {
+    background-image: url(/src/assets/TulsaGoldenHurricane.png);
+}
+
+.UCLALG {
+    background-image: url(/src/assets/UCLABruins.png);
+}
+
+.UtahLG {
+    background-image: url(/src/assets/SouthAlabamaJaguars.png);
+}
+
+.UtahStateLG {
+    background-image: url(/src/assets/UtahStateAggies.png);
+}
+
+.VanderbiltLG {
+    background-image: url(/src/assets/VanderbiltCommodores.png);
+}
+
+.VirginiaLG {
+    background-image: url(/src/assets/VirginiaCavaliers.png);
+}
+
+.VirginiaTechLG {
+    background-image: url(/src/assets/VirginiaTechHokies.png);
+}
+
+.WakeForestLG {
+    background-image: url(/src/assets/WakeForestDemonDeacons.png);
+}
+
+.WashingtonLG {
+    background-image: url(/src/assets/WashingtonHuskies.png);
+}
+
+.WashingtonStateLG {
+    background-image: url(/src/assets/WashingtonStateCougars.png);
+}
+
+.WestVirginiaLG {
+    background-image: url(/src/assets/WestVirginiaMountaineers.png);
+}
+
+.WesternMichiganLG {
+    background-image: url(/src/assets/WesternMichiganBroncos.png);
+}
+
+.WisconsinLG {
+    background-image: url(/src/assets/WisconsinBadgers.png);
+}
+
+.WyomingLG {
+    background-image: url(/src/assets/WyomingCowboys.png);
 }

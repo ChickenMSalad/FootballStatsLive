@@ -80,7 +80,7 @@ namespace FootballStatsLive.Server.DataAccessLayer
                         return testValue.ToLower().Contains(searchTerm.ToLower());
                     }));
 
-                return result;
+                return result.ToList();
             }
             catch
             {
