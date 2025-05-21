@@ -47,7 +47,8 @@ namespace FootballStatsLive.Server.Models
             {
                 if (double.TryParse(value, out double result))
                 {
-                    _winningPercentage = value; // set only if valid double
+                    if (result < 1) 
+                        _winningPercentage = value; // set only if valid double and is less than 1
                 }
             }
         }
