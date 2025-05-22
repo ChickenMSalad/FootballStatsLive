@@ -22,10 +22,6 @@ End User Story: As a sports announcer, I would like to search for football teams
 ### Executing program
 
 * After cloning the code, open in Visual Studio and click Start to run the application
-* Step-by-step bullets
-```
-code blocks for commands
-```
 
 ## Help
 
@@ -39,7 +35,6 @@ deantaylor01@aol.com
 Contributors names and contact info
 
 Dean Taylor 
-ex. [@DeanTaylor](deantaylor01@aol.com)
 
 ## Version History
 
