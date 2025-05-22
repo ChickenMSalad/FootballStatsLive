@@ -58,13 +58,17 @@
     }
 }
 @media (max-width: 768px){
-    .navbar{
+    .navbar {
         padding: 20px 5%;
+        display: block;
     }
-    .navbar ul{
-        display: none;
+    .navbar ul {
+        margin-top: 10px;
     }
-    .navbar button img{
+    .navbar button {
+        margin-top: 10px;
+    }
+    .navbar button img {
         width: 12px;
     }
 }

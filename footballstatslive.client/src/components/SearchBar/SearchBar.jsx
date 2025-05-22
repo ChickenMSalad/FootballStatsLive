@@ -6,7 +6,7 @@ import 'react-dropdown/style.css';
 function SearchBar(props) {
     // setup and init state values
     const [searchTerm, setSearchTerm] = useState('');
-    const [columnTerm, setColumnTerm] = useState('');
+    const [columnTerm, setColumnTerm] = useState('All');
 
     // handler for when the search input text is changed
     const handleInputChange = (event) => {
@@ -55,6 +55,7 @@ function SearchBar(props) {
     // and make it the first option
     options.unshift(allOption);
 
+
     // return the search bar component
     return (
         <div className="search-bar">
@@ -69,7 +70,7 @@ function SearchBar(props) {
             <button onClick={resetSearch} aria-label="Reset Data"><i className="reset-icon" aria-hidden="true"></i></button>
             <div className="column-search">
                 <span>Search By Column:</span>
-                <Dropdown options={options} onChange={handleSelectChange} value={options[0].label} placeholder="Select a column" />
+                <Dropdown options={options} onChange={handleSelectChange} value={columnTerm} placeholder="Select a column" />
             </div>
         </div>
     );

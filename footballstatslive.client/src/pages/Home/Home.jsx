@@ -5,11 +5,13 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import SearchBar from "../../components/SearchBar/SearchBar";
 import './Home.css'
 import { StatsContext } from '../../context/StatsContext'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Home = () => {
 
-const { stats, setStats, columns } = useContext(StatsContext);
+    const { stats, setStats, columns } = useContext(StatsContext);
+
+    const navigate = useNavigate();
 
     async function populateFootballStatsData() {
         const response = await fetch('/footballstats/index');
@@ -33,6 +35,9 @@ const { stats, setStats, columns } = useContext(StatsContext);
     function onReset() {
         populateFootballStatsData();
     }
+    function handleRowClick(row, event) {
+        navigate(`/team/${row.id}`);
+    }
 
 useEffect(()=>{
   // 
@@ -45,6 +50,7 @@ const contents = stats === undefined
         <DataTable
             columns={columns}
             data={stats}
+            onRowClicked={handleRowClick}
             pagination
             dense
         />
