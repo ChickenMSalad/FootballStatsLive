@@ -5,6 +5,7 @@ import arrow_icon from '../../assets/arrow_icon.png'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+
     // link out to ESPN's College Football page
     const url = 'https://www.espn.com/college-football/teams';
     const handleClick = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
         </Link>
         <ul>
             <Link to={'/'}> <li>Home</li></Link>
-            <li>Documentation</li>
+              <Link to={'/documentation'}> <li>Documentation</li></Link>
             <Link to={'/about'}> <li>About</li></Link>
         </ul>
         <div className="nav-right">
