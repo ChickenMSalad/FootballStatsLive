@@ -1,61 +1,26 @@
-import { useEffect, useState } from 'react';
-import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Team from './pages/Team/Team';
+import About from './pages/About/About';
+import Documentation from './pages/Documentation/Documentation';
+import Footer from './components/Footer/Footer';
 
 function App() {
-    const [stats, setStats] = useState();
-
-    useEffect(() => {
-        populateFootballStatsData();
-    }, []);
-
-    const contents = stats === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <table className="table table-striped" aria-labelledby="tableLabel">
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Team</th>
-                    <th>Mascot</th>
-                    <th>Date of Last Win</th>
-                    <th>Winning Percentage</th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Games</th>
-                </tr>
-            </thead>
-            <tbody>
-                {stats.map(footballstat =>
-                    <tr key={footballstat.id}>
-                        <td>{footballstat.rank}</td>
-                        <td>{footballstat.team}</td>
-                        <td>{footballstat.mascot}</td>
-                        <td>{footballstat.dateOfLastWin}</td>
-                        <td>{footballstat.winningPercentage}</td>
-                        <td>{footballstat.wins}</td>
-                        <td>{footballstat.losses}</td>
-                        <td>{footballstat.ties}</td>
-                        <td>{footballstat.games}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
 
     return (
-        <div>
-            <h1 id="tableLabel">Football Stats</h1>
-            <p>This component demonstrates fetching data from the server.</p>
-            {contents}
+        <div className='app'>
+            <Navbar />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/team/:teamId' element={<Team />} />
+                <Route path='/documentation' element={<Documentation />} />
+                <Route path='/about' element={<About />} />
+            </Routes>
+            <Footer />
         </div>
     );
-    
-    async function populateFootballStatsData() {
-        const response = await fetch('/footballstats');
-        if (response.ok) {
-            const data = await response.json();
-            setStats(data);
-        }
-    }
+
 }
 
 export default App;

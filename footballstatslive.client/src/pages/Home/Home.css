@@ -1,0 +1,476 @@
+.home{
+    padding: 0px 10px;
+    padding-bottom: 100px;
+}
+.hero {
+    max-width: 90%;
+    margin: 80px auto;
+    align-items: center;
+    text-align: center;
+}
+
+h1, p {
+    margin-bottom: 15px;
+}
+
+
+.missingdata::after {
+    color: red;
+    font-weight: bold;
+    content: "*";
+}
+
+.error {
+    margin-top: 5px;
+    color: red;
+    font-size: small;
+}
+/* this is for the team logos in the datatable */
+.team:before {
+    margin-right: 4px;
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+    display: inline-block;
+    content: "";
+    vertical-align: -50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.AirForce:before {
+    background-image: url(/src/assets/teamlogos/AirForceFalcons.png);
+}
+
+.Akron:before {
+    background-image: url(/src/assets/teamlogos/AkronZips.png);
+}
+
+.Alabama:before {
+    background-image: url(/src/assets/teamlogos/AlabamaCrimsonTide.png);
+}
+
+.Arizona:before {
+    background-image: url(/src/assets/teamlogos/ArizonaStateSunDevils.png);
+}
+
+.ArizonaState:before {
+    background-image: url(/src/assets/teamlogos/ArizonaWildcats.png);
+}
+
+.Arkansas:before {
+    background-image: url(/src/assets/teamlogos/ArkansasRazorbacks.png);
+}
+
+.ArkansasState:before {
+    background-image: url(/src/assets/teamlogos/ArkansasStateRedWolves.png);
+}
+
+.Army:before {
+    background-image: url(/src/assets/teamlogos/ArmyBlackKnights.png);
+}
+
+.Auburn:before {
+    background-image: url(/src/assets/teamlogos/AuburnTigers.png);
+}
+
+.BallState:before {
+    background-image: url(/src/assets/teamlogos/BallStateCardinals.png);
+}
+
+.Baylor:before {
+    background-image: url(/src/assets/teamlogos/BaylorBears.png);
+}
+
+.BostonCollege:before {
+    background-image: url(/src/assets/teamlogos/BostonCollegeEagles.png);
+}
+
+.BowlingGreen:before {
+    background-image: url(/src/assets/teamlogos/BowlingGreenFalcons.png);
+}
+
+.BrighamYoung:before {
+    background-image: url(/src/assets/teamlogos/BYUCougars.png);
+}
+
+.California:before {
+    background-image: url(/src/assets/teamlogos/CaliforniaGoldenBears.png);
+}
+
+.CentralMichigan:before {
+    background-image: url(/src/assets/teamlogos/CentralMichiganChippewas.png);
+}
+
+.Cincinnati:before {
+    background-image: url(/src/assets/teamlogos/CincinnatiBearcats.png);
+}
+
+.Clemson:before {
+    background-image: url(/src/assets/teamlogos/ClemsonTigers.png);
+}
+
+.Colorado:before {
+    background-image: url(/src/assets/teamlogos/ColoradoBuffaloes.png);
+}
+
+.ColoradoState:before {
+    background-image: url(/src/assets/teamlogos/ColoradoStateRams.png);
+}
+
+.Duke:before {
+    background-image: url(/src/assets/teamlogos/DukeBlueDevils.png);
+}
+
+.EastCarolina:before {
+    background-image: url(/src/assets/teamlogos/EastCarolinaPirates.png);
+}
+
+.EasternMichigan:before {
+    background-image: url(/src/assets/teamlogos/EasternMichiganEagles.png);
+}
+
+.Florida:before {
+    background-image: url(/src/assets/teamlogos/FloridaGators.png);
+}
+
+.FloridaState:before {
+    background-image: url(/src/assets/teamlogos/FloridaStateSeminoles.png);
+}
+
+.FresnoState:before {
+    background-image: url(/src/assets/teamlogos/FresnoStateBulldogs.png);
+}
+
+.Georgia:before {
+    background-image: url(/src/assets/teamlogos/GeorgiaBulldogs.png);
+}
+
+.GeorgiaTech:before {
+    background-image: url(/src/assets/teamlogos/GeorgiaTechYellowJackets.png);
+}
+
+.Hawaii:before {
+    background-image: url(/src/assets/teamlogos/HawaiiRainbowWarriors.png);
+}
+
+.Houston:before {
+    background-image: url(/src/assets/teamlogos/HoustonCougars.png);
+}
+
+.Idaho:before {
+    background-image: url(/src/assets/teamlogos/vandals.png);
+}
+
+.Illinois:before {
+    background-image: url(/src/assets/teamlogos/IllinoisFightingIllini.png);
+}
+
+.Indiana:before {
+    background-image: url(/src/assets/teamlogos/IndianaHoosiers.png);
+}
+
+.Iowa:before {
+    background-image: url(/src/assets/teamlogos/IowaHawkeyes.png);
+}
+
+.IowaState:before {
+    background-image: url(/src/assets/teamlogos/IowaStateCyclones.png);
+}
+
+.Kansas:before {
+    background-image: url(/src/assets/teamlogos/KansasJayhawks.png);
+}
+
+.KansasState:before {
+    background-image: url(/src/assets/teamlogos/KansasStateWildcats.png);
+}
+
+.Kent:before {
+    background-image: url(/src/assets/teamlogos/KentStateGoldenFlashes.png);
+}
+
+.Kentucky:before {
+    background-image: url(/src/assets/teamlogos/KentuckyWildcats.png);
+}
+
+.LouisianaState:before {
+    background-image: url(/src/assets/teamlogos/LSUTigers.png);
+}
+
+.LouisianaTech:before {
+    background-image: url(/src/assets/teamlogos/LouisianaTechBulldogs.png);
+}
+
+.LouisianaLafayette:before {
+    background-image: url(/src/assets/teamlogos/LouisianaRaginCajuns.png);
+}
+
+.LouisianaMonroe:before {
+    background-image: url(/src/assets/teamlogos/ULMonroeWarhawks.png);
+}
+
+.Louisville:before {
+    background-image: url(/src/assets/teamlogos/LouisvilleCardinals.png);
+}
+
+.Marshall:before {
+    background-image: url(/src/assets/teamlogos/MarshallThunderingHerd.png);
+}
+
+.Maryland:before {
+    background-image: url(/src/assets/teamlogos/MarylandTerrapins.png);
+}
+
+.Memphis:before {
+    background-image: url(/src/assets/teamlogos/MemphisTigers.png);
+}
+
+.MiamiFlorida:before {
+    background-image: url(/src/assets/teamlogos/MiamiHurricanes.png);
+}
+
+.MiamiOhio:before {
+    background-image: url(/src/assets/teamlogos/MiamiOHRedHawks.png);
+}
+
+.Michigan:before {
+    background-image: url(/src/assets/teamlogos/MichiganWolverines.png);
+}
+
+.MichiganState:before {
+    background-image: url(/src/assets/teamlogos/MichiganStateSpartans.png);
+}
+
+.Minnesota:before {
+    background-image: url(/src/assets/teamlogos/MinnesotaGoldenGophers.png);
+}
+
+.Mississippi:before {
+    background-image: url(/src/assets/teamlogos/OleMissRebels.png);
+}
+
+.MississippiState:before {
+    background-image: url(/src/assets/teamlogos/MississippiStateBulldogs.png);
+}
+
+.Missouri:before {
+    background-image: url(/src/assets/teamlogos/MissouriTigers.png);
+}
+
+.Navy:before {
+    background-image: url(/src/assets/teamlogos/NavyMidshipmen.png);
+}
+
+.Nebraska:before {
+    background-image: url(/src/assets/teamlogos/NebraskaCornhuskers.png);
+}
+
+.NevadaLasVegas:before {
+    background-image: url(/src/assets/teamlogos/UNLVRebels.png);
+}
+
+.NevadaReno:before {
+    background-image: url(/src/assets/teamlogos/NevadaWolfPack.png);
+}
+
+.NewMexico:before {
+    background-image: url(/src/assets/teamlogos/NewMexicoLobos.png);
+}
+
+.NewMexicoState:before {
+    background-image: url(/src/assets/teamlogos/NewMexicoStateAggies.png);
+}
+
+.NorthCarolina:before {
+    background-image: url(/src/assets/teamlogos/NorthCarolinaTarHeels.png);
+}
+
+.NorthCarolinaState:before {
+    background-image: url(/src/assets/teamlogos/NCStateWolfpack.png);
+}
+
+.NorthTexas:before {
+    background-image: url(/src/assets/teamlogos/NorthTexasMeanGreen.png);
+}
+
+.NorthernIllinois:before {
+    background-image: url(/src/assets/teamlogos/NorthernIllinoisHuskies.png);
+}
+
+.Northwestern:before {
+    background-image: url(/src/assets/teamlogos/NorthwesternWildcats.png);
+}
+
+.NotreDame:before {
+    background-image: url(/src/assets/teamlogos/NotreDameFightingIrish.png);
+}
+
+.OhioState:before {
+    background-image: url(/src/assets/teamlogos/OhioStateBuckeyes.png);
+}
+
+.OhioUniversity:before {
+    background-image: url(/src/assets/teamlogos/OhioBobcats.png);
+}
+
+.Oklahoma:before {
+    background-image: url(/src/assets/teamlogos/OklahomaSooners.png);
+}
+
+.OklahomaState:before {
+    background-image: url(/src/assets/teamlogos/OklahomaStateCowboys.png);
+}
+
+.Oregon:before {
+    background-image: url(/src/assets/teamlogos/OregonDucks.png);
+}
+
+.OregonState:before {
+    background-image: url(/src/assets/teamlogos/OregonStateBeavers.png);
+}
+
+.PennState:before {
+    background-image: url(/src/assets/teamlogos/PennStateNittanyLions.png);
+}
+
+.Pittsburgh:before {
+    background-image: url(/src/assets/teamlogos/PittsburghPanthers.png);
+}
+
+.Purdue:before {
+    background-image: url(/src/assets/teamlogos/PurdueBoilermakers.png);
+}
+
+.Rice:before {
+    background-image: url(/src/assets/teamlogos/RiceOwls.png);
+}
+
+.Rutgers:before {
+    background-image: url(/src/assets/teamlogos/RutgersScarletKnights.png);
+}
+
+.SanJoseState:before {
+    background-image: url(/src/assets/teamlogos/SanJosStateSpartans.png);
+}
+
+.SouthCarolina:before {
+    background-image: url(/src/assets/teamlogos/SouthCarolinaGamecocks.png);
+}
+
+.SouthernCal:before {
+    background-image: url(/src/assets/teamlogos/USCTrojans.png);
+}
+
+.SouthernMethodist:before {
+    background-image: url(/src/assets/teamlogos/SMUMustangs.png);
+}
+
+.SouthernMiss:before {
+    background-image: url(/src/assets/teamlogos/SouthernMissGoldenEagles.png);
+}
+
+.Stanford:before {
+    background-image: url(/src/assets/teamlogos/StanfordCardinal.png);
+}
+
+.Syracuse:before {
+    background-image: url(/src/assets/teamlogos/SyracuseOrange.png);
+}
+
+.Temple:before {
+    background-image: url(/src/assets/teamlogos/TempleOwls.png);
+}
+
+.Tennessee:before {
+    background-image: url(/src/assets/teamlogos/TennesseeVolunteers.png);
+}
+
+.Texas:before {
+    background-image: url(/src/assets/teamlogos/TexasLonghorns.png);
+}
+
+.TexasAM:before {
+    background-image: url(/src/assets/teamlogos/TexasAampMAggies.png);
+}
+
+.TexasChristian:before {
+    background-image: url(/src/assets/teamlogos/TCUHornedFrogs.png);
+}
+
+.TexasTech:before {
+    background-image: url(/src/assets/teamlogos/TexasTechRedRaiders.png);
+}
+
+.TexasElPaso:before {
+    background-image: url(/src/assets/teamlogos/TexasStateBobcats.png);
+}
+
+.Toledo:before {
+    background-image: url(/src/assets/teamlogos/ToledoRockets.png);
+}
+
+.Tulane:before {
+    background-image: url(/src/assets/teamlogos/TulaneGreenWave.png);
+}
+
+.Tulsa:before {
+    background-image: url(/src/assets/teamlogos/TulsaGoldenHurricane.png);
+}
+
+.UCLA:before {
+    background-image: url(/src/assets/teamlogos/UCLABruins.png);
+}
+
+.Utah:before {
+    background-image: url(/src/assets/teamlogos/SouthAlabamaJaguars.png);
+}
+
+.UtahState:before {
+    background-image: url(/src/assets/teamlogos/UtahStateAggies.png);
+}
+
+.Vanderbilt:before {
+    background-image: url(/src/assets/teamlogos/VanderbiltCommodores.png);
+}
+
+.Virginia:before {
+    background-image: url(/src/assets/teamlogos/VirginiaCavaliers.png);
+}
+
+.VirginiaTech:before {
+    background-image: url(/src/assets/teamlogos/VirginiaTechHokies.png);
+}
+
+.WakeForest:before {
+    background-image: url(/src/assets/teamlogos/WakeForestDemonDeacons.png);
+}
+
+.Washington:before {
+    background-image: url(/src/assets/teamlogos/WashingtonHuskies.png);
+}
+
+.WashingtonState:before {
+    background-image: url(/src/assets/teamlogos/WashingtonStateCougars.png);
+}
+
+.WestVirginia:before {
+    background-image: url(/src/assets/teamlogos/WestVirginiaMountaineers.png);
+}
+
+.WesternMichigan:before {
+    background-image: url(/src/assets/teamlogos/WesternMichiganBroncos.png);
+}
+
+.Wisconsin:before {
+    background-image: url(/src/assets/teamlogos/WisconsinBadgers.png);
+}
+
+.Wyoming:before {
+    background-image: url(/src/assets/teamlogos/WyomingCowboys.png);
+}

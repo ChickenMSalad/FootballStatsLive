@@ -1,0 +1,32 @@
+.pdfdocument {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 100px auto;
+    margin-bottom: 50px;
+}
+
+.pdfdocument-about p {
+    max-width: 450px;
+}
+
+.pdfdocument-about p.title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.pdfdocument-about p.title b {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.pdfdocument-about-info {
+    min-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 300;
+}

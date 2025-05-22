@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "pdfjs-dist": "^4.8.69",
+    "react-data-table-component": "^7.7.0",
+    "react-dropdown": "^1.11.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-pdf": "^9.2.1",
+    "react-router-dom": "^7.6.0",
+    "styled-components": "^6.1.18"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@vitest/browser": "^3.1.4",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.1.4",
+    "vitest-browser-react": "^0.2.0"
+  }
+}
