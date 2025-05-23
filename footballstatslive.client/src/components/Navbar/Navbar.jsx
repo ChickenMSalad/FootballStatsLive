@@ -6,18 +6,24 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
+    // link out to ESPN's College Football page
+    const url = 'https://www.espn.com/college-football/teams';
+    const handleClick = () => {
+        window.open(url, '_blank');
+    };
+
   return (
     <div className='navbar'>
        <Link to={'/'}>
          <img src={logo} alt="" className='logo' />
         </Link>
         <ul>
-        <Link to={'/'}> <li>Home</li></Link>
-            <li>Documentation</li>
-            <li>About</li>
+            <Link to={'/'}> <li>Home</li></Link>
+              <Link to={'/documentation'}> <li>Documentation</li></Link>
+            <Link to={'/about'}> <li>About</li></Link>
         </ul>
         <div className="nav-right">
-            <button>Real Stats<img src={arrow_icon} alt="" /></button>
+            <button onClick={handleClick}>Real Stats<img src={arrow_icon} alt="" /></button>
         </div>
     </div>
   )

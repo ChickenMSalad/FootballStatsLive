@@ -1,54 +1,58 @@
 import { createContext, useEffect, useState } from "react";
 
+// Create a new context for football stats
 export const StatsContext = createContext();
 
 const StatsContextProvider = (props) => {
 
+    // State to hold football statistics data
     const [stats, setStats] = useState();
 
+    // Function to check if the backend server is up and responding
     const checkServerStatus = async () => {
         try {
             const response = await fetch('/footballstats');
             if (response.ok) {
-                console.log('Response OK!!!');
-                return true;
+                return true; // Server is up
             }
         } catch (error) {
             console.error('Error checking server status:', error);
         }
-        console.log('Response NOT OK');
-        return false;
+        return false; // Server is down or unreachable
     };
 
+    // Function that waits until the server is ready before populating data
     const waitForServer = async () => {
-        console.log('Calling waitForServer');
         while (!(await checkServerStatus())) {
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Check every 1 second
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Retry every second
         }
-        console.log('Server is ready!');
+        // Once the server is ready, fetch the stats data
         populateFootballStatsData();
-
     };
 
+    // Fetch football statistics from the server and update state
     async function populateFootballStatsData() {
         const response = await fetch('/footballstats/index');
         if (response.ok) {
             const data = await response.json();
-            setStats(data);
+            setStats(data); // Set the fetched data to state
         }
     }
 
+    // React effect that runs on component mount
     useEffect(() => {
         if (stats === undefined) {
+            // In development, wait for the server to be available
             if (process.env.NODE_ENV === "development") {
                 waitForServer();
             } else {
+                // In production, fetch data directly
                 populateFootballStatsData();
-
             }
         }
     }, []);
 
+    // Table column definitions for displaying football stats
     const columns = [
         {
             name: 'Rank',
@@ -61,7 +65,8 @@ const StatsContextProvider = (props) => {
             selector: row => row.team,
             sortable: true,
             width: '200px',
-            cell: row => <div className={'team ' + row.team.replace(/[^0-9a-zA-Z]/g, '')}>{row.team}</div>
+            // Custom cell rendering with class name based on team name
+            cell: row => <div data-tag="allowRowEvents" className={'team ' + row.team.replace(/[^0-9a-zA-Z]/g, '')}>{row.team}</div>
         },
         {
             name: 'Mascot',
@@ -72,6 +77,7 @@ const StatsContextProvider = (props) => {
             name: 'Date of Last Win',
             selector: row => row.dateOfLastWin,
             sortable: true,
+            // Highlight cells with missing data
             conditionalCellStyles: [
                 {
                     when: row => row.dateOfLastWin == null,
@@ -136,10 +142,12 @@ const StatsContextProvider = (props) => {
         },
     ];
 
+    // Context value that will be available to child components
     const contextValue = {
         stats, setStats, columns
     }
 
+    // Return the context provider wrapping child components
     return (
         <StatsContext.Provider value={contextValue}>
             {props.children}
