@@ -1,6 +1,6 @@
 [
   {
-    "Name": "New Profile",
+    "Name": "FootballStatsLiveProfile",
     "Projects": [
       {
         "Path": "FootballStatsLive.Server\\FootballStatsLive.Server.csproj",
