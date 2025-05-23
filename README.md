@@ -14,10 +14,13 @@ End User Story: As a sports announcer, I would like to search for football teams
 
 * Visual Studio 2022 or greater.
 * Windows 10 or greater windows OS.
+* Node JS
 
 ### Installing
 
 * git clone install https://github.com/ChickenMSalad/FootballStatsLive
+* when running in Visual Studio, you should select the run profile : FootballStatsLiveProfile
+* NOTE: I could not force the default profile to be the above in the repo.  I may have needed to push my .suo file, but thats not a great thing to do.
   
 ### Executing program
 
